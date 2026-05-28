@@ -1,5 +1,3 @@
-# Arin Tri Rahmadani/06/14119/X TJKT 1
-
 import datetime
 import os
 import platform
@@ -37,7 +35,7 @@ def cek_ping_lengkap(host):
         return "Tidak Aktif / Timeout", None
 
 
-hosts = ["8.8.8.8", "google.com", "192.168.1.113"]
+hosts = ["8.8.8.8", "google.com", "192.168.1.1"] # Contoh IP Address
 log = []
 kumpulan_latency = []
 
@@ -112,8 +110,8 @@ def klasifikasi_jaringan_ai(status_log, latency_list):
 kesimpulan_warna, kesimpulan_file = klasifikasi_jaringan_ai(log, kumpulan_latency)
 print(f"\nKesimpulan AI: {kesimpulan_warna}")
 
-# Simpan ke file arin.log_jaringan.txt
-with open("arin.log_jaringan.txt", "a", encoding="utf-8") as f:
+# Simpan ke file log_jaringan.txt
+with open("log_jaringan.txt", "a", encoding="utf-8") as f:
     f.write("\n" + "=" * 45 + "\n")
     f.write(
         f"Waktu Cek: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
